@@ -1,0 +1,14 @@
+{
+  "name": "Murmle",
+  "description": "Send the DOM to the Murmle http listener",
+  "version": "0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+      "matches": [ "*://*/*"],
+      "js": ["content.js"]
+  }]
+}
